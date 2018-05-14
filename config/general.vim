@@ -83,11 +83,11 @@ endif
 " }}}
 " Tabs and Indents {{{
 " ----------------
-set textwidth=80    " Text width maximum chars before wrapping
+set textwidth=120    " Text width maximum chars before wrapping
 set noexpandtab     " Don't expand tabs to spaces.
-set tabstop=2       " The number of spaces a tab is
-set softtabstop=2   " While performing editing operations
-set shiftwidth=2    " Number of spaces to use in auto(indent)
+set tabstop=4       " The number of spaces a tab is
+set softtabstop=4   " While performing editing operations
+set shiftwidth=4    " Number of spaces to use in auto(indent)
 set smarttab        " Tab insert blanks according to 'shiftwidth'
 set autoindent      " Use same indenting on new lines
 set smartindent     " Smart autoindenting on new lines
@@ -113,14 +113,14 @@ set incsearch       " Incremental search
 set hlsearch        " Highlight search results
 set wrapscan        " Searches wrap around the end of the file
 set showmatch       " Jump to matching bracket
-set matchpairs+=<:> " Add HTML brackets to pair matching
+"set matchpairs+=<:> " Add HTML brackets to pair matching
 set matchtime=1     " Tenths of a second to show the matching paren
 set cpoptions-=m    " showmatch will wait 0.5s or until a char is typed
 
 " }}}
 " Behavior {{{
 " --------
-set nowrap                      " No wrap by default
+"set nowrap                      " No wrap by default
 set linebreak                   " Break long lines at 'breakat'
 set breakat=\ \	;:,!?           " Long lines break chars
 set nostartofline               " Cursor in same column for few commands
@@ -149,9 +149,10 @@ set noshowmode          " Don't show mode in cmd window
 set shortmess=aoOTI     " Shorten messages and don't show intro
 set scrolloff=2         " Keep at least 2 lines above/below
 set sidescrolloff=5     " Keep at least 5 lines left/right
-set number              " Show line numbers
-set noruler             " Disable default status ruler
+set ruler               " Disable default status ruler
 set list                " Show hidden characters
+set number              " Show line numbers
+set relativenumber
 
 set showtabline=2       " Always show the tabs line
 set winwidth=30         " Minimum width for active window
@@ -165,7 +166,7 @@ set cmdheight=2         " Height of the command line
 set cmdwinheight=5      " Command-line lines
 set noequalalways       " Don't resize windows on split or close
 set laststatus=2        " Always show a status line
-set colorcolumn=80      " Highlight the 80th character limit
+set colorcolumn=120			" Highlight the 80th character limit
 set display=lastline
 
 " Do not display completion messages

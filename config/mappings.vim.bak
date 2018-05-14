@@ -1,0 +1,34 @@
+nnoremap ! :!
+
+nnoremap <expr> zz (winline() == (winheight(0)+1) / 2) ? 'zt' : (winline() == 1) ? 'zb' : 'zz'
+noremap <expr> <C-f> max([winheight(0) - 2, 1]) ."\<C-d>".(line('w$') >= line('$') ? "L" : "M")
+noremap <expr> <C-b> max([winheight(0) - 2, 1]) ."\<C-u>".(line('w0') <= 1 ? "H" : "M")
+noremap <expr> <C-e> (line("w$") >= line('$') ? "j" : "3\<C-e>")
+noremap <expr> <C-y> (line("w0") <= 1 ? "k" : "3\<C-y>")
+
+cnoremap <C-k> <Home>
+cnoremap <C-j> <End>
+cnoremap <C-l> <Right>
+cnoremap <C-h> <Left>
+
+nnoremap <silent><Leader>w :write<CR>
+vnoremap <silent><Leader>w <Esc>:write<CR>
+
+cmap W!! w !sudo tee % >/dev/null
+
+map Q gq
+
+nmap <silent> gh :echo 'hi<'.synIDattr(synID(line('.'), col('.'), 1), 'name')
+            \.'> trans<'.synIDattr(synID(line('.'), col('.'), 0), 'name').'> lo<'
+            \.synIDattr(synIDtrans(synID(line('.'), col('.'), 1)), 'name').'>'<CR>
+
+nnoremap <silent><Leader>1 :<C-u>tabfirst<CR>
+nnoremap <silent><Leader>0 :<C-u>tablast<CR>
+nnoremap <silent><Leader>[ :<C-u>tabprevious<CR>
+nnoremap <silent><Leader>] :<C-u>tabnext<CR>
+let g:lasttab = 1
+nmap <silent> \\ :execute 'tabn '.g:lasttab<CR>
+
+command! DC vert new | setlocal bt=nofile | r # | od_ | diffthis | wincmd p | diffthis
+
+

@@ -84,3 +84,6 @@ let g:loaded_zipPlugin = 1
 " }}}
 
 " vim: set foldmethod=marker ts=2 sw=2 tw=80 noet :
+
+let g:python3_host_prog = '/usr/local/bin/python3'
+let g:python_host_prog = '/usr/bin/python'

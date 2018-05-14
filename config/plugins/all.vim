@@ -55,6 +55,7 @@ endif
 
 if dein#tap('tagbar')
 	nnoremap <silent> <Leader>o   :<C-u>TagbarOpenAutoClose<CR>
+	nnoremap <silent> <Leader>\		:<C-u>TagbarToggle<CR>
 
 	" Also use h/l to open/close folds
 	let g:tagbar_map_closefold = ['h', '-', 'zc']
@@ -98,9 +99,9 @@ if dein#tap('vim-operator-surround')
 	nmap <silent>srr <Plug>(operator-surround-replace)<Plug>(textobj-multiblock-a)
 endif
 
-if dein#tap('vim-operator-replace')
-	xmap p <Plug>(operator-replace)
-endif
+"if dein#tap('vim-operator-replace')
+"	xmap p <Plug>(operator-replace)
+"endif
 
 if dein#tap('vim-operator-flashy')
 	map y <Plug>(operator-flashy)

@@ -40,7 +40,7 @@ nnoremap <leader>a =ip
 " nnoremap x "_x
 
 " Toggle fold
-nnoremap <CR> za
+" nnoremap <CR> za
 
 " Focus the current fold by closing all others
 nnoremap <S-Return> zMza
@@ -112,10 +112,10 @@ cnoremap <C-b> <Left>
 cnoremap <C-d> <C-w>
 
 " Switch history search pairs, matching my bash shell
-cnoremap <C-p>  <Up>
-cnoremap <C-n>  <Down>
-cnoremap <Up>   <C-p>
-cnoremap <Down> <C-n>
+"cnoremap <C-p>  <Up>
+"cnoremap <C-n>  <Down>
+"cnoremap <Up>   <C-p>
+"cnoremap <Down> <C-n>
 
 " }}}
 " File operations {{{
@@ -140,7 +140,7 @@ cmap W!! w !sudo tee % >/dev/null
 " ---------
 
 " I like to :quit with 'q', shrug.
-nnoremap <silent> q :<C-u>:quit<CR>
+"nnoremap <silent> q :<C-u>:quit<CR>
 autocmd MyAutoCmd FileType man nnoremap <silent><buffer> q :<C-u>:quit<CR>
 
 " Macros
@@ -167,6 +167,8 @@ nnoremap <silent> <A-j> :<C-U>tabnext<CR>
 nnoremap <silent> <A-k> :<C-U>tabprevious<CR>
 nnoremap <silent> <C-Tab> :<C-U>tabnext<CR>
 nnoremap <silent> <C-S-Tab> :<C-U>tabprevious<CR>
+nnoremap <silent> <Leader>] :<C-U>tabnext<CR>
+nnoremap <silent> <Leader>[ :<C-U>tabprevious<CR>
 " Uses g:lasttab set on TabLeave in MyAutoCmd
 let g:lasttab = 1
 nmap <silent> \\ :execute 'tabn '.g:lasttab<CR>

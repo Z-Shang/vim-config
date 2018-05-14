@@ -18,12 +18,20 @@
     autocmd MyAutoCmd FileType denite,qf,nerdtree let b:cursorword=0
     autocmd MyAutoCmd InsertEnter * let b:cursorword=0
     autocmd MyAutoCmd InsertLeave * let b:cursorword=1
+- repo: scrooloose/nerdcommenter
 
 # Lazy Loading
 # ==========================================
 
 # Languages
 # ---------
+
+- { repo: rust-lang/rust.vim, on_ft: rs }
+
+- repo: l04m33/vlime
+  rtp: "vim/"
+  on_ft: [ lisp, lsp, asd ]
+
 - { repo: hail2u/vim-css3-syntax, on_ft: css }
 - { repo: ap/vim-css-color, on_ft: [ css, scss, sass ] }
 - { repo: cakebaker/scss-syntax.vim, on_ft: [ scss, sass ]}
